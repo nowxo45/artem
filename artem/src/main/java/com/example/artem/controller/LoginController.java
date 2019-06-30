@@ -25,7 +25,7 @@ public class LoginController {
 	@RequestMapping(value="/check", method=RequestMethod.POST)
 	public String loginCheck(@ModelAttribute("form")User user) {
 		
-		userMapper.isUserAccount(user.getLoginId(), user.getPassword());
+		userMapper.isUserAccount(user);
 		return "redirect:/test/login";
 		
 	}
